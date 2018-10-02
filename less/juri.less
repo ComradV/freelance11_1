@@ -1,0 +1,172 @@
+.juri-container {
+  background-color: @BG;
+  min-height: ~"calc(100vh - 209px)";
+  display: flex;
+  justify-content: center;
+  flex-shrink: 0;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.juri-card {
+  width: 267px;
+  color: white;
+  text-decoration: none;
+  font-family: @Flama;
+  text-transform: uppercase;
+  text-align: center;
+  transition: all .3s ease-out;
+
+  &:hover {
+    color: black;
+  }
+}
+
+.jc-name {
+  display: block;
+  font-weight: bold;
+  font-size: 24px;
+  padding-top: 40px;
+  position: relative;
+
+  &:before {
+    content: '';
+    display: block;
+    position: absolute;
+    width: 90%;
+    height: 10px;
+    background-color: black;
+    left: 5%;
+    top: 10px;
+  }
+}
+
+.jc-add {
+  display: block;
+  font-weight: 300;
+  font-size: 18px;
+  margin-top: 5px;
+}
+
+// JUDI SINGLE
+
+.juri-single-container {
+  background-color: @BG;
+  min-height: ~"calc(100vh - 209px)";
+  position: relative;
+
+  &:after {
+    content: '';
+    display: block;
+    height: 0;
+    clear: both;
+  }
+}
+
+.juri-single-image {
+  float: left;
+  width: 70%;
+  margin-top: 30px;
+}
+
+.juri-details {
+  background-color: #a79691;
+  float: left;
+  width: 35%;
+  margin-left: -5%;
+  margin-top: 130px;
+  padding: 40px 60px 110px;
+  box-sizing: border-box;
+  color: white;
+  font-family: @Flama;
+}
+
+.jd-name {
+  display: block;
+  font-size: 24px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.jd-add {
+  display: block;
+  font-size: 18px;
+  font-weight: 300;
+  text-transform: uppercase;
+  margin-top: 5px;
+}
+
+.jd-p {
+  margin: 40px 0 35px;
+  font-size: 16px;
+}
+
+.jd-nav {
+  position: relative;
+  height: 30px;
+}
+
+.jd-arrow {
+  width: 0;
+  height: 0;
+  border-style: solid;
+  position: absolute;
+  top: 0px;
+  transition: all .3s ease-out;
+  &_prev {
+    border-width: 15px 15px 15px 0;
+    border-color: transparent #ffffff transparent transparent;
+    left: 0;
+    &:hover {
+      border-color: transparent #000000 transparent transparent;
+    }
+  }
+  &_next {
+    border-width: 15px 0 15px 15px;
+    border-color: transparent transparent transparent #ffffff;
+    right: 0;
+    &:hover {
+      border-color: transparent transparent transparent #000000;
+    }
+  }
+}
+
+@media (max-width:1600px) {
+  .juri-card {
+    margin-top: 30px;
+  }
+}
+
+@media (max-width:1400px) {
+  .juri-single-image {
+    width: 80%;
+  }
+
+  .juri-details {
+    width: 45%;
+    margin-left: -25%;
+  }
+}
+
+@media (max-width:999px) {
+
+  .juri-single-container {
+    padding: 25px 0;
+  }
+
+  .juri-single-image {
+    float: none;
+    display: block;
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .juri-details {
+    float: none;
+    width: 90%;
+    margin-left: -25%;
+    margin: 25px auto 0px;
+    box-sizing: border-box;
+    padding: 25px;
+  }
+}
