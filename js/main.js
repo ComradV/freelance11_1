@@ -35,4 +35,17 @@ $(document).ready(() => {
       $('.mob-menu-btn').hide();
     }
   })
+
+  $('#overlay1').on('click',() => {
+    $('#overlay1').hide();
+  })
+
+  $('.thumbnail img').on('click', (event) => {
+    // $('#overlay1 img').attr("src", $(event.currentTarget).attr('src'));
+    // $('#overlay1').attr('background', `url('../${$(event.currentTarget).attr("src")}') center center no-repeat`);
+    $('#overlay1').attr('background', "url('../${$(event.currentTarget).attr('src')");
+    $('#overlay1').attr('color', 'red');
+    $('#overlay1').show();
+  })
+
 });
