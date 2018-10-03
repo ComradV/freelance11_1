@@ -873,16 +873,24 @@ div#overlay iframe {
     margin: 5%;
     padding: 0;
 }
+@media screen and (max-width: 600px) {
+  .thumbnail {
+    max-width: 80%;
+    max-height: 80%;
+  }
+}
+
 .thumbnail img:hover{
     cursor: pointer;
 }
 .thumbnail img {
     max-width: 100%;
-    height: auto;
+    max-height: 100%;
+    /* height: auto; */
     display: block;
 }
 
-#overlay1 {
+#overlay-galeri {
     position: fixed;
     display: none;
     width: 100%;
@@ -892,13 +900,18 @@ div#overlay iframe {
     right: 0;
     bottom: 0;
     /* background1: url("../galeri/unnamed-8.jpg") center center no-repeat;; */
-    background-size: cover;
-    /* background-color1: rgba(0, 0, 0, 0.5); */
+    /* background-size: cover; */
+    background-color: rgba(0, 0, 0, 0.5);
     z-index: 2;
     cursor: pointer;
     /* background1:url("") center center no-repeat; */
 }
-#overlay1 img {
+@media screen and (max-width: 600px) {
+  #overlay-galeri figure{
+    margin: 0;
+  }
+}
+#overlay-galeri img {
     max-width: 100%;
     max-height: 100%;
     margin: 0 auto;

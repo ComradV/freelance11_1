@@ -2,10 +2,13 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi">
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->
+  
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Ulusal Yarisma</title>
   <link rel="stylesheet" href="css/main.css">
+	<link href='css/simplelightbox.min.css' rel='stylesheet' type='text/css'>
   <!-- Global Site Tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-106958489-2"></script>
 
@@ -40,9 +43,14 @@ src="https://www.facebook.com/tr?id=280280292405363&ev=PageView
   
 </head>
 <body>
-  <div id="overlay1">
+  <div id="overlay-galeri">
+    <figure>
+      <img>
+    </figure>
   </div>
 
+  <div id="menu-placeholder">
+  </div>
 <header class="main-header">
     <div class="header-top-part">
       <!-- <img src="img/date.jpg" alt="20-27 EKIM OCTOBER 2017" class="date-pic"> -->
@@ -102,24 +110,28 @@ src="https://www.facebook.com/tr?id=280280292405363&ev=PageView
   </header>
 
   <section class="article-container">
-    <div class="article-content">
-      <!-- <div class="thumbnail">
-        <img  src="galeri/1H5A0650.JPG"> 
-      </div>
-      <div class="thumbnail">
-        <img  src="galeri/_MG_1494.JPG"> 
-      </div> -->
-      <div class="thumbnail">
-        <img  src="galeri/unnamed-7.jpg"> 
-      </div>
-      <div class="thumbnail">
-        <img  src="galeri/unnamed-8.jpg"> 
-      </div>
+    <div class="gallery"> 
+
+      <a href="galeri/unnamed-7.jpg" class="">
+        <img src="galeri/thumbnails/thumbnail-unnamed-7.jpg" alt="" title="Image 1">
+      </a>
+      <a href="galeri/unnamed-8.jpg" class="">
+        <img src="galeri/thumbnails/thumbnail-unnamed-8.jpg" alt="" title="Image 2">
+      </a>
+      
     </div>
+
   </section>
 
   <script src="js/libs/jquery.min.js" charset="utf-8"></script>
+  <script src="js/libs/simple-lightbox.min.js"></script>
   <script src="js/main.js" charset="utf-8"></script>
+  
+<script>
+	$(function(){
+		$('.gallery a').simpleLightbox();
+	});
+</script>
 
 </body>
 </html>
